@@ -1,18 +1,38 @@
-<h2>Sign up</h2>
+<section id="content" class="m-t-lg wrapper-md animated fadeInUp">    
+  <div class="container aside-xl m-t-lg">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    <section class="m-b-lg">
+      <header class="wrapper text-center">
+        <strong>Sign up</strong>
+      </header>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+        <form action="index.html">
+          <div class="list-group">
+            <div class="list-group-item">
+              <%= form.email_field :email, autocomplete: :off, class: "form-control no-border", placeholder: "Email" %>
+            </div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+            <div class="list-group-item">
+              <%= form.password_field :password, autocomplete: :off, class: "form-control no-border", placeholder: "Password" %>
+            </div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+            <div class="list-group-item">
+              <%= form.password_field :password_confirmation, autocomplete: :off, class: "form-control no-border", placeholder: "Confirm Password" %>
+            </div>
+          </div>
 
-<%= render "devise/shared/links" %>
+          <%= form.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>
+
+          <div class="line line-dashed"></div>
+          <p class="text-muted text-center"><small>Have an account?</small></p>
+          <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default btn-block" %>
+        </form>
+      <% end %>
+      
+    </section>
+
+  </div><!-- .container -->
+</section>

@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'dotenv'
 gem 'devise'
+gem 'sendmail'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
 

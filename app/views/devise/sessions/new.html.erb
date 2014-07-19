@@ -1,17 +1,47 @@
-<h2>Sign in</h2>
+<section id="content" class="m-t-lg wrapper-md animated fadeInUp">    
+  <div class="container aside-xl m-t-lg">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    <%= render 'shared/flash' %>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <section class="m-b-lg">
+      <header class="wrapper text-center">
+        <strong>Sign in to get in touch</strong>
+      </header>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
+        <form action="index.html">
+          <div class="list-group">
+            <div class="list-group-item">
+              <%= form.email_field :email, autocomplete: :off, class: "form-control no-border", placeholder: "Email" %>
+            </div>
+            <div class="list-group-item">
+              <%= form.password_field :password, autocomplete: :off, class: "form-control no-border", placeholder: "Password" %>
+            </div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+            <div class="text-center checkbox i-checks">
+              <%= form.label :remember_me do %>
+                <%= form.check_box :remember_me, checked: true %><i></i> Remember me
+              <% end %>
+            </div>
 
-<%= render "devise/shared/links" %>
+          </div>
+
+
+          <%= form.submit "Sign in", class: "btn btn-lg btn-primary btn-block" %>
+          
+          <div class="text-center m-t m-b">
+            <%= link_to new_user_password_path, class: "text-center m-t m-b" do %>
+              <small>Forgot password?</small>
+            <% end %>
+          </div>
+
+          <div class="line line-dashed"></div>
+          <p class="text-muted text-center"><small>Do not have an account?</small></p>
+          <%= link_to "Create an account", new_user_registration_path, class: "btn btn-lg btn-default btn-block" %>
+        </form>
+      <% end %>
+      
+    </section>
+
+  </div><!-- .container -->
+</section>
