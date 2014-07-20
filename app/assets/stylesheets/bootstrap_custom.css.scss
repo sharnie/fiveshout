@@ -36,6 +36,9 @@ small,
 .small {
   font-size: 12px;
 }
+textarea {
+  resize: none;
+}
 .badge,
 .label {
   font-weight: bold;

@@ -4,7 +4,7 @@ class ShoutsController < ApplicationController
 
   def index
     @shouts = Shout.all.recent(20)
-    @shout  = Shout.new
+    @users  = User.all
   end
 
   def new
