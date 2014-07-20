@@ -1,5 +1,5 @@
-<section id="content" class="m-t-lg wrapper-md animated fadeInUp">    
-  <div class="container aside-xl m-t-lg">
+<section id="content" class="wrapper-md animated fadeInUp">    
+  <div class="container aside-xl">
 
     <%= devise_error_messages! %>
 
@@ -12,11 +12,18 @@
         <form action="index.html">
           <div class="list-group">
             <div class="list-group-item">
-              <%= form.email_field :email, autocomplete: :off, autofocus: true, class: "form-control no-border", placeholder: "Email" %>
+              <%= form.email_field :email, autocomplete: :off, autofocus: true, class: "form-control no-border", placeholder: "Email address" %>
             </div>
           </div>
 
-          <%= form.submit "Reset Password", class: "btn btn-lg btn-primary btn-block" %>
+          <%= form.submit "Reset password", class: "btn btn-lg btn-primary btn-block" %>
+
+          <div class="line line-dashed"></div>
+          <p class="text-muted text-center">
+            <%= link_to "Sign In", new_user_session_path %> |
+            <%= link_to "Sign Up", new_user_registration_path %>
+          </p>
+
         </form>
       <% end %>
       

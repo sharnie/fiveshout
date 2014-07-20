@@ -1,7 +1,5 @@
-<section id="content" class="m-t-lg wrapper-md animated fadeInUp">    
-  <div class="container aside-xl m-t-lg">
-
-    <%= render 'shared/flash' %>
+<section id="content" class="wrapper-md animated fadeInUp">    
+  <div class="container aside-xl">
 
     <section class="m-b-lg">
       <header class="wrapper text-center">
@@ -12,13 +10,13 @@
         <form action="index.html">
           <div class="list-group">
             <div class="list-group-item">
-              <%= form.email_field :email, autocomplete: :off, class: "form-control no-border", placeholder: "Email" %>
+              <%= form.email_field :email, autocomplete: :off, class: "form-control no-border", placeholder: "Email address" %>
             </div>
             <div class="list-group-item">
               <%= form.password_field :password, autocomplete: :off, class: "form-control no-border", placeholder: "Password" %>
             </div>
 
-            <div class="text-center checkbox i-checks">
+            <div class="checkbox i-checks">
               <%= form.label :remember_me do %>
                 <%= form.check_box :remember_me, checked: true %><i></i> Remember me
               <% end %>
@@ -36,8 +34,10 @@
           </div>
 
           <div class="line line-dashed"></div>
-          <p class="text-muted text-center"><small>Do not have an account?</small></p>
-          <%= link_to "Create an account", new_user_registration_path, class: "btn btn-lg btn-default btn-block" %>
+          <p class="text-muted text-center">
+            <small>Do not have an account?</small>
+            <%= link_to "Sign Up", new_user_registration_path %>
+          </p>
         </form>
       <% end %>
       

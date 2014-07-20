@@ -1,0 +1,12 @@
+<section class="panel panel-default">
+  <%= form_for(@shout) do |form| %>
+    <%= form.text_area :text, class: "form-control no-border", rows: 3, placeholder: "Currently accepting shout request..." %>
+    <footer class="panel-footer bg-light lter">
+      <%= form.submit "Post", class: "btn btn-info pull-right btn-sm" %>
+      <ul class="nav nav-pills nav-sm">
+        <li><a href="#"><i class="fa fa-camera text-muted"></i></a></li>
+        <li><a href="#"><i class="fa fa-video-camera text-muted"></i></a></li>
+      </ul>
+    </footer>
+  <% end %>
+</section>

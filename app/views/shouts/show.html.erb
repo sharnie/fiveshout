@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-md-offset-3 col-sm-6">
+
+    <section class="panel">
+
+      <ul class="list-group list-group-lg no-bg auto">                          
+        <span class="list-group-item clearfix shout" %>
+          <small class="pull-right text-muted"><%= @shout.created_at %></small>
+          <span class="pull-left thumb-sm avatar m-r">
+            <%= image_tag avatar_url @shout.user, 200 %>
+            <i class="on b-white bottom"></i>
+          </span>
+          <span class="">
+            <span class="username">
+              <span class="font-bold"><%= @shout.user.full_name %></span>
+              <span class="text-muted"><%= @shout.user.email %></span>
+            </span>
+            <p class="shout-text clear"><%= @shout.text %></p>
+          </span>
+        <span>
+      </ul>
+
+    </section>
+
+
+    <div class="m-b">
+      <div class="btn-group">
+      <a href="#" class="btn btn-success btn-rounded font-bold">
+        Shout me
+      </a>
+      <a href="#" class="btn btn-success btn-rounded font-bold">
+        +152 
+      </a>
+      </div>
+
+      <a href="#" class="avatar thumb-sm">
+        <img src="http://flatfull.com/themes/scale/images/a0.png" alt="...">
+        <i class="on b-white"></i>
+      </a>
+      <a href="#" class="avatar thumb-sm">
+        <img src="http://flatfull.com/themes/scale/images/a1.png" alt="...">
+        <i class="busy b-white"></i>
+      </a>
+      <a href="#" class="avatar thumb-sm">
+        <img src="http://flatfull.com/themes/scale/images/a2.png" alt="...">
+        <i class="away b-white"></i>
+      </a>
+      <a href="#" class="avatar thumb-sm">
+        <img src="http://flatfull.com/themes/scale/images/a3.png" alt="...">
+        <i class="off b-white"></i>
+      </a>
+    </div>
+
+
+  </div>
+</div>

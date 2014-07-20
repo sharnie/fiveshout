@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # confirm user account
-  # User.update_all(:confirmed_at => Time.now)
+  has_many :shouts
 
 end

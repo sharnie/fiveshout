@@ -19,6 +19,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'pry'
   gem 'spring'
   gem 'sqlite3'
 end
